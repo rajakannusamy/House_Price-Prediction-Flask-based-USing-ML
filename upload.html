@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Upload data</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+        </head>
+<body>
+    <form action = "/upload" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <br><br>
+         <input type = "submit"/>
+         <input type = "reset"/>
+      </form> 
+
+      <a href="/"> Home Page</a>
+</body>
+</html>

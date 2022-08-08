@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                Square feet: <input type="number" name='LotArea' placeholder="Enter LotArea(square feet)"><br>
+                Overall Qualification: <input type="number" name='OverallQual' placeholder="Overall-Qualification 10 to 1"><br>
+                Overall Condition: <input type="number" name='OverallCond' placeholder="OveralRating-condition 10 to 1"><br>
+                Built Year: <input type="number"  name='YearBuilt' placeholder="Year Built Year"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> House Expected Price is: {{data}}</p>
+        </div>
+
+    </div>
+
+    
+
+<a href= "/admin"> Admin Page</a>
+</body>
+
+</html>
